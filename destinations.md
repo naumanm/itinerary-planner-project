@@ -3,3 +3,10 @@
 - san francisco, ca
 - honolulu, hi
 - blitzkreig, de
+- gwangju, south korea
+- gohyeon, south korea
+- albuquerque, nm
+- bethesda, md
+- washington, dc
+- alexandria, va
+- kealekekua, hi
