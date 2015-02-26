@@ -10,3 +10,5 @@
 - washington, dc
 - alexandria, va
 - kealekekua, hi
+- Papete, Tahiit
+>>>>>>> bb5911468b3b56a3e4eea51c672838cd108e046d
