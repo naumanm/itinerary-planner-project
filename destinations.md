@@ -3,3 +3,4 @@
 - san francisco, ca
 - honolulu, hi
 - blitzkreig, de
+- Papete, Tahiit
