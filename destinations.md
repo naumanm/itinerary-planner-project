@@ -1,0 +1,3 @@
+- riyadh, saudi arabia
+- sophia antipolis, france
+- san francisco, ca
