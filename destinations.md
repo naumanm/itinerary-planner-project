@@ -1,3 +1,5 @@
 - riyadh, saudi arabia
 - sophia antipolis, france
 - san francisco, ca
+- honolulu, hi
+- blitzkreig, de
