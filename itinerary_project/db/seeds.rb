@@ -6,4 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-travelers = Traveler.create([{ name: 'Paris'}])
+travelers = Traveler.create(
+  [
+    { first_name: 'Paris'},
+    { last_name: 'Jones'},
+    { email: 'Abraham@ga.com'}
+  ]
+  )
