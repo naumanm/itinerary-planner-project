@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150227213909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "trav_id"
+    t.text     "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "connections", force: :cascade do |t|
+    t.integer  "itin_id"
+    t.integer  "trav_id"
+    t.integer  "dest_id"
+    t.date     "start_date"
+    t.date     "return_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "destinations", force: :cascade do |t|
     t.string   "place"
