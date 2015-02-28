@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  root 'access#login'
+
+  get '/login', to: 'access#login', as: 'login'
+
+  get '/signup', to: 'access#signup', as: 'signup'
+
+  get '/main', to: 'access#main', as: 'main'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
