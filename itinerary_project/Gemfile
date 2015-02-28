@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
 
-<<<<<<< HEAD
-gem 'simple_form'
-=======
-
->>>>>>> f5a0db4002cfc3509d3adf00e082de63d2eb9f68
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -32,11 +27,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-<<<<<<< HEAD
 
-=======
 gem 'simple_form'
->>>>>>> f5a0db4002cfc3509d3adf00e082de63d2eb9f68
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
