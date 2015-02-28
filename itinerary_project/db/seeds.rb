@@ -27,4 +27,10 @@ squirrel = Traveler.create(first_name: 'Abraham', last_name: 'Hall', email: 'Abr
 
 ####   Connection Table ####
 
+gpom.itineraries << honeymoon
+
+mike.itineraries << mikesbigtrip
+
+squirrel.itineraries << businesstrip
+
 
