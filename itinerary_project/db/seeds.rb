@@ -4,16 +4,16 @@ ankara = Destination.create(place: "Ankara, Turkey", name: "funtrip", start_date
 
 riyadh = Destination.create(place: "Riyadh, Saudi Arabia", name: "thanksgivingtrip", start_date: '2015/01/03', return_date: '2015/03/14')
 
-tokyo = Destination.create(place: "Tokyo, JP", name: "tour", start_date: '2015/10/04', return_date: '2015/03/14')
+tokyo = Destination.create(place: "Tokyo, JP", name: "tour", start_date: '2015/10/04', return_date: '2015/12/14')
 
 
 #### Itinerary Table ####
 
-Itinerary.create(name: "funtrip", start_date: '2015/01/02', return_date: '2015/03/14', traveler_id: 56, destination_id: 66)
+Itinerary.create( traveler_id: 62, destination_id: 75)
 
-Itinerary.create(name: "thanksgivingtrip", start_date: '2015/01/03', return_date: '2015/03/14', traveler_id: 57, destination_id: 67)
+Itinerary.create(traveler_id: 63, destination_id: 76)
 
-Itinerary.create(name: "tour", start_date: '2015/10/04', return_date: '2015/03/14', traveler_id: 58, destination_id: 68)
+Itinerary.create(traveler_id: 64, destination_id: 77)
 
 
 #### Traveler Table ####
@@ -27,14 +27,14 @@ squirrel = Traveler.create(first_name: 'Abraham', last_name: 'Hall', email: 'Abr
 
 #### Comment Table ####
 
-positive = Comment.create(traveler_id: 56, comment: "gpom and squirrel are my fave traveling companions!")
+positive = Comment.create(traveler_id: 62, comment: "gpom and squirrel are my fave traveling companions!")
 
-negative = Comment.create(traveler_id: 57, comment: "gpom and squirrel are driving me crazy with their antics!!")
+negative = Comment.create(traveler_id: 63, comment: "gpom and squirrel are driving me crazy with their antics!!")
 
-neutral = Comment.create(traveler_id: 58, comment: "gpom and squirrel are alright and I would consider traveling with them again potentially.")
+neutral = Comment.create(traveler_id: 64, comment: "gpom and squirrel are alright and I would consider traveling with them again potentially.")
 
 
-#### Connection Table ####
+
 
 # gpom.itineraries << honeymoon
 
