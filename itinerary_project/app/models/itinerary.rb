@@ -4,5 +4,5 @@ class Itinerary < ActiveRecord::Base
 
 	has_many :comments, as: :commentable
 
-	validates :name, :start_date, :return_date, :traveler_id, :destination_id, presence: true
+	validates :traveler_id, :destination_id, presence: true
 end
