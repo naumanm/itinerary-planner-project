@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+root 'index#hompage'
+
+resources :itineraries do 
+  res
   resources :itineraries, :has_many => :comments
 
   root 'access#login'
