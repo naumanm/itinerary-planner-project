@@ -3,8 +3,8 @@ class Traveler < ActiveRecord::Base
 	validates :email, uniqueness: true
 	has_secure_password
 
-	has_many :connections
-	has_many :destinations, through: :connections
+	has_many :itineraries
+	has_many :destinations, through: :itineraries
 	has_many :comments, :as => :commentable
 
 end

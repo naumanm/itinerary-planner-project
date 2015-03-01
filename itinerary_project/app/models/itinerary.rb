@@ -1,8 +1,8 @@
 class Itinerary < ActiveRecord::Base
-	has_many :connections
-	has_many :destinations, through: :connections
-	has_many :travelers, through: :connections
+	belongs_to :traveler
+	belongs_to :destination
+
 	has_many :comments, as: :commentable
 
-	validates :name, :itin_s_date, :itin_r_date, presence: true
+	validates :name, :start_date, :return_date, :traveler_id, :destination_id, presence: true
 end

@@ -11,26 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150227235646) do
+ActiveRecord::Schema.define(version: 20150301180238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "trav_id"
     t.text     "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "traveler_id"
   end
 
   create_table "connections", force: :cascade do |t|
-    t.integer  "itin_id"
-    t.integer  "trav_id"
-    t.integer  "dest_id"
     t.date     "start_date"
     t.date     "return_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "itinerary_id"
+    t.integer  "traveler_id"
+    t.integer  "destination_id"
   end
 
   create_table "destinations", force: :cascade do |t|
@@ -41,10 +41,12 @@ ActiveRecord::Schema.define(version: 20150227235646) do
 
   create_table "itineraries", force: :cascade do |t|
     t.string   "name"
-    t.date     "itin_s_date"
-    t.date     "itin_r_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.date     "start_date"
+    t.date     "return_date"
+    t.integer  "traveler_id"
+    t.integer  "destination_id"
   end
 
   create_table "travelers", force: :cascade do |t|
