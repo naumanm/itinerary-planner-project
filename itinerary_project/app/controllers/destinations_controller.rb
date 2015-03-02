@@ -9,9 +9,10 @@ class DestinationsController < ApplicationController
   end
 
   def create
-    @destinations = Destination.new destination_params
-    if @destinations.save
-      redirect_to traveler_itinerary_destinations_path
+    @destination = Destination.new destination_params
+    if @destination.save
+      #redirect_to traveler_itinerary_destinations_path
+      redirect_to itineraries_path
     else
       render :new
     end
@@ -27,7 +28,7 @@ class DestinationsController < ApplicationController
     end
 
     def destination_params
-      params.require(:destination).permit(:place, :start_date, :return_date)
+      params.require(:destination).permit(:place, :name, :start_date, :return_date)
     end
 
 end
