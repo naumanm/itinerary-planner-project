@@ -1,8 +1,7 @@
 <h1>Destinations</h1>
 
 <% @destinations.each do |destination| %>
-  <p><%= link_to "#{place}", destination %></p>
+  <p><%= destination.place %></p>
 <% end %>
 
 
-<%= link_to "Add destination", new_destination_path %>
