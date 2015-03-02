@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root 'index#hompage'
+root 'site#index'
 
 resources :travelers do 
   resources :itineraries do 
