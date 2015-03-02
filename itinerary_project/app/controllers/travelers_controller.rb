@@ -1,9 +1,5 @@
 class TravelersController < ApplicationController
-  before_action :find_traveler, only: [:edit, :update, :destroy]
-
-  def index
-    
-  end
+  before_action :find_traveler, only: [:show, :edit, :update, :destroy]
 
   def create
     Traveler.create traveler_params
@@ -28,7 +24,7 @@ class TravelersController < ApplicationController
 
   def destroy
     @traveler.destroy
-    redirect_to
+    redirect_to 
   end
 
   private 

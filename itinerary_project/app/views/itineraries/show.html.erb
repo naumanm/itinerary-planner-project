@@ -1,2 +1,11 @@
-<h1>Itineraries#show</h1>
-<p>Find me in app/views/itineraries/show.html.erb</p>
+<h1>Your Intinerariesß</h1>
+<p>
+  <% @intinerary.destination.traveler do |i| %>
+  <li><%= i.name %></li>
+  <li><%= i.place %></li>
+  <li><%= i.first_name i.last_name %></li>
+  <li>Depart<%= i.start_date %></li>
+  <li>Arrive<%= i.return_date %></li>
+  <% end %>
+</p>
+<%= link_to "Edit Your Intineraies",edit_traveler_itinerary_path%>

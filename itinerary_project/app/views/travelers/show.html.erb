@@ -1,10 +1,12 @@
 <h1>Traveler's Info</h1>
-
+<% @traveler do |t| %>
   <p>
-    <%= @traveler.last_name %>,
-    <%= @traveler.first_name %>
-    <p><%= @traveler.email %></p>
+    <%= t.last_name %>,
+    <%= t.first_name %>
+    <p><%= t.email %></p>
   </p>
+  <% end %>
+  
  <%= link_to "Your Itineraries", traveler_intineraries_path %>
 
  <%= link_to "Update Your Info", edit_traveler_path %>
