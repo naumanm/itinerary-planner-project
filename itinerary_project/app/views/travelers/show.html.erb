@@ -5,5 +5,7 @@
     <%= @traveler.first_name %>
     <p><%= @traveler.email %></p>
   </p>
- 
+ <%= link_to "Your Itineraries", traveler_intineraries_path %>
+
+ <%= link_to "Update Your Info", edit_traveler_path %>
 

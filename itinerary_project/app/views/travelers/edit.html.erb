@@ -1,2 +1,11 @@
-<h1>Travelers#edit</h1>
-<p>Find me in app/views/travelers/edit.html.erb</p>
+<h1>Update Your Info</h1>
+
+<% form_for @traveler do |t| %>
+  <%= t.text_field :first_name %>
+  <%= t.text_field :last_name %>
+  <%= t.text_field :email %>
+  <%= t.text_field :password %>
+  <%= t.submit :update %>
+<% end %>
+
+<%= link_to "Back to Your Info Page", traveler_path %>
