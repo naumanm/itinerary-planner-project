@@ -1,3 +1,5 @@
+
+require 'bcrypt'
 class Traveler < ActiveRecord::Base
 	validates :first_name, :last_name, :email, presence: true
 	validates :email, uniqueness: true
@@ -6,5 +8,7 @@ class Traveler < ActiveRecord::Base
 	has_many :itineraries
 	has_many :destinations, through: :itineraries
 	has_many :comments, :as => :commentable
+
+
 
 end

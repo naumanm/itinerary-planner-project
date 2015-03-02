@@ -3,17 +3,21 @@ Rails.application.routes.draw do
 
 root 'site#index'
 
-get 'login', to: "site#login", as: 'login'
+get '/login', to: "site#login", as: 'login'
 
-get 'signup', to: "site#signup", as: 'signup'
+get '/signup', to: "site#signup", as: 'signup'
 
-post 'login', to: "site#attempt_login"
+post '/login', to: "site#attempt_login"
 
-post 'signup', to: "site#create"
+post '/signup', to: "site#create"
 
-get 'home', to: "site#home", as: 'home'
+get '/home', to: "site#home", as: 'home'
 
-get 'logout', to: "site#logout"
+get '/logout', to: "site#logout"
+
+get '/login' => 'sessions#new'
+post '/login' => 'sessions#create'
+get '/logout' => 'sessions#destroy'
 
 
 resources :travelers do 
