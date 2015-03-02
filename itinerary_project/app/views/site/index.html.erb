@@ -8,24 +8,26 @@
 </head>
 
 <body>
-<h1>Sign up for MakeMyTrip</h1>
+<h1>Sign In to MakeMyTrip</h1>
 
-  <div class="container">
-  <div class="col-"></div>
-    <form class="form-signin">
-      <h2 class="form-signin-heading"></h2>
-      <input type="text" id="inputFname" class="form-control" placeholder="First name" required autofocus>
-      <input type="text" id="inputLname" class="form-control" placeholder="Last name" required autofocus>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    </form>
-  </div> <!-- /container -->
+  	
+
+<br><br>
+
+<%= form_tag(login_path) do %>
+
+  <%= label_tag(:username)%>
+  <%= text_field_tag(:username, params[:username], autofocus: true)%>
+
+
+  <%= label_tag(:password)%>
+  <%= password_field_tag(:password)%>
+
+  <%= submit_tag("Log in", class: "btn btn-primary") %>
+
+<% end %>
+<br><br><br>
+
 
 	<%= link_to "Don't have an account? Sign up here", new_traveler_path%>
 

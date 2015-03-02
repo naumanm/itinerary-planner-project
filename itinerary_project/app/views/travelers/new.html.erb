@@ -8,23 +8,49 @@
 </head>
 
 <body>
-<h1>Sign up for MakeMyTrip</h1>
-
-  <div class="container">
-  <div class="col-"></div>
-    <form class="form-signin">
-      <h2 class="form-signin-heading"></h2>
-      <input type="text" id="inputFname" class="form-control" placeholder="First name" required autofocus>
-      <input type="text" id="inputLname" class="form-control" placeholder="Last name" required autofocus>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up!</button>
-    </form>
-  </div> <!-- /container -->
-
-  <div class="navbar navbar-fixed-bottom">a GPOM Squirrel Pouch Production</div>
+<container>
+<h1>Sign up for MakeMyTrip!</h1>
     
+<% if @traveler.errors.any?%>
+	<% @traveler.errors.full_messages.each do |error|%>
+		<p class="text-danger">
+			<%= error %>
+		</p>
+	<% end %>
+<% end %>
+
+<div >
+<%= form_for @traveler do |f| %>
+<p class="form-group">
+	<%= f.label :first_name %>
+	<%= f.text_field :first_name, class:"form-control" %>
+</p>
+<p class="form-group">
+	<%= f.label :last_name %>
+	<%= f.text_field :last_name, class:"form-control" %>
+</p>
+<p class="form-group">
+	<%= f.label :email %>
+	<%= f.number_field :email, class:"form-control" %>
+</p>
+<p class="form-group">
+	<%= f.label :password %>
+	<%= f.number_field :password, class:"form-control" %>
+</p>
+<p class="form-group">
+	<%= f.submit class:"btn btn-success" %>
+</p>
+<% end %>
+</div>
+<p>
+
+<p>
+<%= link_to "Back", root_path %>
+</p>
+
+<div class="navbar navbar-fixed-bottom">a GPOM Squirrel Pouch Production</div>
+
+</container>
 </body>
 </html>
 
