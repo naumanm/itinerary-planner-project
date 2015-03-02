@@ -1,8 +1,8 @@
 <h1>Add a Destination</h1>
 
-<%= form_for @destination do |f| %>
+<%= form_for @destination, url:"/destination" do |f| %>
   <%= f.text_field :place, :placeholder => "Place" %>
-  <%= f.text_field :state_date, :placeholder => "Start Date" %>
-  <%= f.text_field :return_date, :placeholder => "Return Date" %>  
+  <%= f.date_field :start_date, :placeholder => "Start Date" %>
+  <%= f.date_field :return_date, :placeholder => "Return Date" %>  
   <%= f.submit %>
 <% end %>
