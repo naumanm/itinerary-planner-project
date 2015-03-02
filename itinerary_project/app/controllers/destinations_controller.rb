@@ -8,6 +8,15 @@ class DestinationsController < ApplicationController
     @destination = Destination.new
   end
 
+  def create
+    @destinations = Destination.new destination_params
+    if @destinations.save
+      redirect_to traveler_itinerary_destinations_path
+    else
+      render :new
+    end
+  end
+
   def show
     @destinations = Destination.all
   end
