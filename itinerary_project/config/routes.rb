@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
 root 'site#index'
 
 resources :travelers do 
@@ -14,8 +15,8 @@ resources :itineraries, :has_many => :comments
 
 end
 
-#  Prefix Verb   URI Pattern                                                                       Controller#Action
-#                                root GET    /                                                                                 index#hompage
+# Prefix Verb   URI Pattern                                                                       Controller#Action
+#                                root GET    /                                                                                 site#index
 #     traveler_itinerary_destinations GET    /travelers/:traveler_id/itineraries/:itinerary_id/destinations(.:format)          destinations#index
 #                                     POST   /travelers/:traveler_id/itineraries/:itinerary_id/destinations(.:format)          destinations#create
 #  new_traveler_itinerary_destination GET    /travelers/:traveler_id/itineraries/:itinerary_id/destinations/new(.:format)      destinations#new
@@ -56,4 +57,3 @@ end
 #                                     PATCH  /itineraries/:id(.:format)                                                        itineraries#update {:has_many=>:comments}
 #                                     PUT    /itineraries/:id(.:format)                                                        itineraries#update {:has_many=>:comments}
 #                                     DELETE /itineraries/:id(.:format)                                                        itineraries#destroy {:has_many=>:comments}
-
