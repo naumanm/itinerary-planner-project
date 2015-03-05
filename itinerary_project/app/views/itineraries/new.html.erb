@@ -1,2 +1,14 @@
-<h1>Itineraries#new</h1>
-<p>Find me in app/views/itineraries/new.html.erb</p>
+<h1>New Itinerary</h1>
+<% unless @itinerary.empty? %>
+
+<%= form_for @itinerary.destinations.travelers.each do |i| %>
+  <%= i.text_field :name %>
+  <%= i.text_field :place %>
+  <%= i.text_field :first_name %>
+  <%= i.text_field :last_name %>
+  <%= i.date_field :start_date %>
+  <%= i.date_field :return_date %>
+  <%= i.submit "Add New" %>
+ 
+
+

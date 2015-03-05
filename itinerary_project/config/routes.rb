@@ -1,29 +1,15 @@
 Rails.application.routes.draw do
 
-
 root 'site#index'
-
-get '/login', to: "site#login", as: 'login'
-
-get '/signup', to: "site#signup", as: 'signup'
-
-post '/login', to: "site#attempt_login"
-
-post '/signup', to: "site#create"
-
-get '/home', to: "site#home", as: 'home'
-
-get '/logout', to: "site#logout"
-
-get '/login' => 'sessions#new'
-post '/login' => 'sessions#create'
-get '/logout' => 'sessions#destroy'
-
 
 resources :travelers do 
   resources :itineraries do 
-    resources :destinations
-    resources :travelers
+    resources :destinations do
+      post 
+    end
+    resources :travelers do 
+      post 
+    end
   end
 end
 
@@ -33,13 +19,7 @@ resources :itineraries, :has_many => :comments
 end
 
 #  Prefix Verb   URI Pattern                                                                       Controller#Action
-#                                root GET    /                                                                                 site#index
-#                               login GET    /login(.:format)                                                                  site#login
-#                              signup GET    /signup(.:format)                                                                 site#signup
-#                                     POST   /login(.:format)                                                                  site#attempt_login
-#                                     POST   /signup(.:format)                                                                 site#create
-#                                home GET    /home(.:format)                                                                   site#home
-#                              logout GET    /logout(.:format)                                                                 site#logout
+#                                root GET    /                                                                                 index#hompage
 #     traveler_itinerary_destinations GET    /travelers/:traveler_id/itineraries/:itinerary_id/destinations(.:format)          destinations#index
 #                                     POST   /travelers/:traveler_id/itineraries/:itinerary_id/destinations(.:format)          destinations#create
 #  new_traveler_itinerary_destination GET    /travelers/:traveler_id/itineraries/:itinerary_id/destinations/new(.:format)      destinations#new
@@ -80,3 +60,4 @@ end
 #                                     PATCH  /itineraries/:id(.:format)                                                        itineraries#update {:has_many=>:comments}
 #                                     PUT    /itineraries/:id(.:format)                                                        itineraries#update {:has_many=>:comments}
 #                                     DELETE /itineraries/:id(.:format)                                                        itineraries#destroy {:has_many=>:comments}
+
